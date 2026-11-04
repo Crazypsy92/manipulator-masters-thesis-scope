@@ -1,33 +1,17 @@
-# Manipulator Master's Thesis Scope
+# Robotics Thesis Research Pipeline
 
-A research workspace for evidence-based literature analysis, thesis scoping, experiment planning, and research documentation in robotic manipulation and cluttered-scene grasping.
+一个整合“单篇论文深度精读 → 多篇论文横向比较 → 硕士论文方法选型与研究规划”的科研 Skill。
 
-## Repository description
+## 安装
+将整个 `robotics-thesis-research-pipeline` 文件夹放入 Codex/Agent 可识别的 skills 目录，并确保 `SKILL.md` 位于该文件夹根目录。
 
-Evidence-based literature reviews, figure and software surveys, thesis planning, workload assessment, and experiment design for robotic manipulation research.
+## 核心特点
+- 一个 Skill，分阶段执行，不再维护三个彼此独立的 Skill。
+- 每篇论文生成标准化记录，作为横向比较的正式输入。
+- 横向比较结果继续传递给方法适配、创新点审查、论文框架和实验规划。
+- 证据定位贯穿全流程；明确区分原文事实、作者解释、跨论文归纳和分析推断。
+- 增量新增论文时只更新受影响的阶段。
 
-## Language policy
-
-- Repository metadata, directory names, file names, and code identifiers: English.
-- Research documents and substantive technical content: Chinese.
-- Markdown documents preserve Obsidian-compatible syntax where applicable, including native heading links and callouts.
-
-## Contents
-
-| Path | Description |
-|---|---|
-| [`SKILL.md`](SKILL.md) | Reusable workflow and quality rules for literature analysis and thesis planning. |
-| [`docs/research/reference_papers_and_research_plan.md`](docs/research/reference_papers_and_research_plan.md) | Chinese synthesis of reference papers, figures, tables, software platforms, and research planning. |
-| [`docs/research/thesis_framework_and_implementation_plan.md`](docs/research/thesis_framework_and_implementation_plan.md) | Chinese thesis framework, research questions, innovation scope, validation plan, and implementation stages. |
-
-## Scope
-
-The repository focuses on translating prior research and the actual constraints of a robotic manipulation project into a feasible, measurable, and defensible master's thesis plan. It distinguishes source-supported findings, project facts, and recommendations; simulation evidence is kept separate from real-robot evidence.
-
-## Evidence and maintenance principles
-
-1. Preserve source terminology and claims; do not invent missing evidence.
-2. Record uncertainty and OCR limitations explicitly.
-3. Separate simulation, visualization, data synthesis, CAD, planning, and deep-learning tools by their actual roles.
-4. Treat proposed innovations as hypotheses until supported by controlled experiments.
-5. Keep the research scope bounded and update plans only when new evidence justifies the change.
+## 主要文件
+- `SKILL.md`：完整流程和执行规则。
+- `references/paper-record-schema.md`：单篇精读到横向比较的标准交接结构。
