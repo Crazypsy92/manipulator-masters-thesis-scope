@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "project": "robotics-thesis-research",
+  "updated_at": null,
+  "papers": [
+    {
+      "paper_id": "paper_001",
+      "canonical_title": "Replace with the verified paper title",
+      "doi": null,
+      "authors": [],
+      "year": null,
+      "document_type": null,
+      "file_name": null,
+      "sha256": null,
+      "version": "original",
+      "status": "NEW",
+      "last_analyzed_at": null,
+      "record_path": "paper_records/paper_001/",
+      "related_comparison_groups": [],
+      "notes": "Unknown fields remain null; do not guess."
+    }
+  ]
+}
