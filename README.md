@@ -1,17 +1,57 @@
 # Robotics Thesis Research Pipeline
 
-一个整合“单篇论文深度精读 → 多篇论文横向比较 → 硕士论文方法选型与研究规划”的科研 Skill。
+面向机械臂、机器人视觉、无序抓取、6D 位姿估计、抓取生成、接触评价和运动规划研究的端到端科研 Skill。
 
-## 安装
-将整个 `robotics-thesis-research-pipeline` 文件夹放入 Codex/Agent 可识别的 skills 目录，并确保 `SKILL.md` 位于该文件夹根目录。
+本仓库将三项原本独立的能力整合为一个连续流水线：
 
-## 核心特点
-- 一个 Skill，分阶段执行，不再维护三个彼此独立的 Skill。
-- 每篇论文生成标准化记录，作为横向比较的正式输入。
-- 横向比较结果继续传递给方法适配、创新点审查、论文框架和实验规划。
-- 证据定位贯穿全流程；明确区分原文事实、作者解释、跨论文归纳和分析推断。
-- 增量新增论文时只更新受影响的阶段。
+**单篇论文深度精读 → 多篇论文横向比较 → 硕士论文方法选型与研究规划。**
 
-## 主要文件
-- `SKILL.md`：完整流程和执行规则。
-- `references/paper-record-schema.md`：单篇精读到横向比较的标准交接结构。
+## 核心设计
+
+- **证据先行：** 重要结论必须能追溯到论文页码、章节、图表或公式。
+- **标准化交接：** 每篇论文形成独立的标准化记录，作为横向比较的正式输入。
+- **增量更新：** 新增论文只处理新增材料，并更新受影响的比较和选型；默认不重新精读旧论文。
+- **去重与版本管理：** 使用 SHA-256、DOI、标题/作者/年份识别重复文件和论文版本。
+- **研究适配：** 将论文方法与用户的相机、机械臂、夹爪、仿真平台、算力和实验条件逐项核对。
+- **实验闭环：** 强制考虑基线、对照、消融、失败案例，并区分仿真与真机证据。
+
+## Repository Contents
+
+| Path | Purpose |
+|---|---|
+| [`SKILL.md`](SKILL.md) | 主 Skill：完整阶段流程、门禁、证据规范、增量更新机制 |
+| [`references/paper-record-schema.md`](references/paper-record-schema.md) | 单篇精读到横向比较的标准化交接结构 |
+| [`assets/literature_manifest.template.json`](assets/literature_manifest.template.json) | 文献库状态、哈希、版本和分析状态模板 |
+| [`assets/change_log.template.md`](assets/change_log.template.md) | 每轮增量更新记录模板 |
+| [`docs/research/reference_papers_and_research_plan.md`](docs/research/reference_papers_and_research_plan.md) | 已有参考论文、图表、软件平台与研究规划汇总 |
+| [`docs/research/thesis_framework_and_implementation_plan.md`](docs/research/thesis_framework_and_implementation_plan.md) | 已有硕士论文框架、创新点和实施计划 |
+
+## Pipeline
+
+1. `Stage 0` — 文献接收、清单、去重和可读性检查。
+2. `Stage 1` — 快速筛选与技术分类。
+3. `Stage 2` — 单篇论文深度精读、图表盘点、软件用途审计和证据索引。
+4. `Stage 3` — 多篇论文横向比较、实验可比性审查和研究空白分析。
+5. `Stage 4` — 结合真实课题约束进行方法适配与选型。
+6. `Stage 5` — 硕士论文框架、图表规划、工作量分级和实验矩阵。
+7. `Stage 6` — 总体验收、证据审计和下一步任务。
+
+## Incremental Update Policy
+
+Adding papers does **not** trigger a full re-reading of the existing library.
+
+For each update, the workflow reads the manifest and change log, fingerprints incoming files, classifies them as `NEW`, `DUPLICATE`, `POSSIBLE_DUPLICATE`, `REVISION`, or `UNCHANGED`, and processes only the new or changed material.
+
+Existing deep-reading records remain reusable. Only relevant comparison groups, research-gap conclusions, method-selection decisions, or thesis plans are updated. Old papers are rechecked only when a concrete evidence conflict, missing field, version change, or user request requires it; the reason and scope must be logged.
+
+## Language and Markdown
+
+- Repository metadata, paths, file names, and identifiers: English.
+- Research analysis and substantive documents: Chinese.
+- Obsidian-compatible Markdown is preferred for research notes.
+- Use `##` as the highest heading level in generated research notes.
+- Preserve Obsidian heading links such as `[[#Section|Display text]]` and native callouts.
+
+## Research Integrity
+
+This workflow does not equate author claims with verified facts. It separates source facts, author interpretations, cross-paper synthesis, analytical judgments, and hypotheses requiring validation. It does not rank numerical results across incompatible datasets or protocols, and it never treats simulation visualization as real-robot validation.
