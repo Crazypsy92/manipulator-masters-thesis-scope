@@ -11,9 +11,9 @@
 }
 .markdown-preview-view.thesis-paper,.markdown-source-view.mod-cm6.thesis-paper,
 .markdown-preview-view.thesis-hub,.markdown-source-view.mod-cm6.thesis-hub {
-  --file-line-width:1080px; --line-height-normal:1.72;
+  --file-line-width:1080px; --line-height-normal:1.72; --font-text:"Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
 }
-.markdown-preview-view.thesis-paper,.markdown-preview-view.thesis-hub {line-height:1.72;}
+.markdown-preview-view.thesis-paper,.markdown-preview-view.thesis-hub {line-height:1.72;font-family:"Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;}
 .markdown-preview-view.thesis-paper h2,.markdown-preview-view.thesis-hub h2 {
   margin-top:1.8em;padding:.42em 0 .42em .72em;border-left:4px solid var(--thesis-accent);
   border-bottom:1px solid var(--thesis-border);color:var(--thesis-accent);letter-spacing:.015em;
