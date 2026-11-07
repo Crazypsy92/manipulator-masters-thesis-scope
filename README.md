@@ -26,6 +26,28 @@
 | [`docs/research/reference_papers_and_research_plan.md`](docs/research/reference_papers_and_research_plan.md) | 已有参考论文、图表、软件平台与研究规划汇总 |
 | [`docs/research/thesis_framework_and_implementation_plan.md`](docs/research/thesis_framework_and_implementation_plan.md) | 已有硕士论文框架、创新点和实施计划 |
 
+## Single-paper Deep Reading Outputs
+
+When one paper is supplied and the user asks for a full reading, the default is **single-paper mode**. It produces four required Chinese Markdown files for independent review:
+
+| File | Purpose |
+|---|---|
+| `01_one_page_card.md` | One-page overview of the question, gap, method, key findings, novelty, and limitations |
+| `02_deep_reading_notes.md` | Full reading notes: research logic, method reconstruction, figures/tables, software and simulation roles, experiments, critique, and research reuse |
+| `03_claim_evidence_index.md` | Claim–Evidence–Location traceability with PDF pages, sections, figures, tables, equations, and confidence |
+| `04_standardized_paper_record.md` | Structured record used as the formal input for cross-paper comparison and thesis planning |
+
+A fifth file, `05_missing_evidence.md`, is created only when the PDF, figures, supplementary materials, software usage, or essential parameters contain unresolved gaps.
+
+Templates:
+- [One-page card](templates/paper_records/01_one_page_card.md)
+- [Deep-reading notes](templates/paper_records/02_deep_reading_notes.md)
+- [Claim-evidence index](templates/paper_records/03_claim_evidence_index.md)
+- [Standardized paper record](templates/paper_records/04_standardized_paper_record.md)
+- [Missing evidence (optional)](templates/paper_records/05_missing_evidence.md)
+
+The substantive content of these files is written in Chinese. File names and paths remain English.
+
 ## Pipeline
 
 1. `Stage 0` — 文献接收、清单、去重和可读性检查。
