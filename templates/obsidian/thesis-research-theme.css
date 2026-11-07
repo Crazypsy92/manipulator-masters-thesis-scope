@@ -1,0 +1,42 @@
+/* Thesis Research Theme — scoped Obsidian CSS snippet */
+.theme-dark {
+  --thesis-accent:#8fb8ff; --thesis-teal:#75d6c2; --thesis-violet:#c5a8ff;
+  --thesis-border:rgba(160,180,215,.22); --thesis-panel:rgba(117,150,205,.08);
+  --thesis-highlight:rgba(235,190,90,.22); --thesis-link:#9fc4ff;
+}
+.theme-light {
+  --thesis-accent:#315f9f; --thesis-teal:#167b70; --thesis-violet:#7651a8;
+  --thesis-border:rgba(65,91,130,.20); --thesis-panel:rgba(63,111,180,.06);
+  --thesis-highlight:rgba(245,198,79,.30); --thesis-link:#285f9f;
+}
+.markdown-preview-view.thesis-paper,.markdown-source-view.mod-cm6.thesis-paper,
+.markdown-preview-view.thesis-hub,.markdown-source-view.mod-cm6.thesis-hub {
+  --file-line-width:1080px; --line-height-normal:1.72;
+}
+.markdown-preview-view.thesis-paper,.markdown-preview-view.thesis-hub {line-height:1.72;}
+.markdown-preview-view.thesis-paper h2,.markdown-preview-view.thesis-hub h2 {
+  margin-top:1.8em;padding:.42em 0 .42em .72em;border-left:4px solid var(--thesis-accent);
+  border-bottom:1px solid var(--thesis-border);color:var(--thesis-accent);letter-spacing:.015em;
+}
+.markdown-preview-view.thesis-paper h3,.markdown-preview-view.thesis-hub h3 {margin-top:1.45em;color:var(--thesis-teal);font-weight:680;}
+.markdown-preview-view.thesis-paper h4,.markdown-preview-view.thesis-hub h4 {margin-top:1.15em;color:var(--thesis-violet);font-weight:650;}
+.markdown-preview-view.thesis-paper a.internal-link,.markdown-preview-view.thesis-hub a.internal-link {color:var(--thesis-link);text-underline-offset:3px;}
+.markdown-preview-view.thesis-paper .callout,.markdown-preview-view.thesis-hub .callout {
+  margin-block:1em;border:1px solid var(--thesis-border);border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+.markdown-preview-view.thesis-paper .callout[data-callout="abstract"],.markdown-preview-view.thesis-hub .callout[data-callout="abstract"] {--callout-color:105,139,210;}
+.markdown-preview-view.thesis-paper .callout[data-callout="tip"],.markdown-preview-view.thesis-hub .callout[data-callout="tip"] {--callout-color:48,164,145;}
+.markdown-preview-view.thesis-paper .callout[data-callout="success"],.markdown-preview-view.thesis-hub .callout[data-callout="success"] {--callout-color:58,157,105;}
+.markdown-preview-view.thesis-paper .callout[data-callout="warning"],.markdown-preview-view.thesis-hub .callout[data-callout="warning"] {--callout-color:204,145,50;}
+.markdown-preview-view.thesis-paper .callout[data-callout="danger"],.markdown-preview-view.thesis-hub .callout[data-callout="danger"] {--callout-color:205,82,89;}
+.markdown-preview-view.thesis-paper .callout[data-callout="example"],.markdown-preview-view.thesis-hub .callout[data-callout="example"] {--callout-color:145,112,205;}
+.markdown-preview-view.thesis-paper table,.markdown-preview-view.thesis-hub table {
+  width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--thesis-border);border-radius:8px;
+}
+.markdown-preview-view.thesis-paper thead tr,.markdown-preview-view.thesis-hub thead tr {background:var(--thesis-panel);}
+.markdown-preview-view.thesis-paper th,.markdown-preview-view.thesis-hub th {color:var(--thesis-accent);font-weight:720;}
+.markdown-preview-view.thesis-paper tbody tr:nth-child(even),.markdown-preview-view.thesis-hub tbody tr:nth-child(even) {background:var(--thesis-panel);}
+.markdown-preview-view.thesis-paper td,.markdown-preview-view.thesis-paper th,
+.markdown-preview-view.thesis-hub td,.markdown-preview-view.thesis-hub th {padding:.58em .72em;vertical-align:top;border-color:var(--thesis-border);}
+.markdown-preview-view.thesis-paper mark,.markdown-preview-view.thesis-hub mark {background:var(--thesis-highlight);color:var(--text-normal);padding:.08em .22em;border-radius:3px;}
+.markdown-preview-view.thesis-paper blockquote,.markdown-preview-view.thesis-hub blockquote {border-left:3px solid var(--thesis-accent);background:var(--thesis-panel);padding:.55em .9em;border-radius:0 7px 7px 0;}
