@@ -1,6 +1,6 @@
 # Standardized Paper Record Schema
 
-> 本文件定义 Stage 2 → Stage 3 的唯一标准交接格式。每篇论文一份。字段无证据时写 `未报告`、`无法确认` 或 `不适用`，不得猜测。
+> 本文件定义单篇精读到横向比较的标准交接格式。每篇论文一份。字段无证据时写“未报告”“无法确认”或“不适用”，不得猜测。
 
 ## 1. Bibliographic identity
 - Paper ID:
