@@ -77,3 +77,16 @@ Existing deep-reading records remain reusable. Only relevant comparison groups, 
 ## Research Integrity
 
 This workflow does not equate author claims with verified facts. It separates source facts, author interpretations, cross-paper synthesis, analytical judgments, and hypotheses requiring validation. It does not rank numerical results across incompatible datasets or protocols, and it never treats simulation visualization as real-robot validation.
+
+## Obsidian Navigation and Visual Style
+
+The pipeline includes an explicit Obsidian output standard:
+
+- Paper notes use the real paper title as the file name; the stable paper ID is retained in YAML aliases and evidence records.
+- A single-paper note can combine the one-page card, deep reading, claim-evidence index, and standardized record without dropping substantive content.
+- Wiki links are used in prose and lists. Inside Markdown tables, use standard Markdown links such as [Paper](<relative/path.md>); do not put [[target|alias]] inside a table cell because the pipe can split the table.
+- Relative paths are resolved from the current note's folder. Nested paper notes must use ../ to return to the package root.
+- Duplicate headings and broken anchors are checked before delivery.
+- Optional scoped CSS is provided at templates/obsidian/thesis-research-theme.css. It supports dark and light themes and does not globally override the user's Vault theme.
+
+See references/obsidian-output-style.md for the full rules.
